@@ -133,6 +133,9 @@ public final class DialView extends View {
 
     @Override
     public boolean performClick() {
+        // superClick refers to when there is a custom OnClickListener defined.
+        // if there is one, use that (through super's performClick)
+        // otherwise, execute the defined default behavior (in the if block)
         final boolean superClick = super.performClick();
         if (!superClick) {
             // idk
